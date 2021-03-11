@@ -80,8 +80,7 @@ namespace TestDotNetCoreWithReact.Models
         public string DVD { get; set; }
         public string BoxOffice { get; set; }
         public string Website { get; set; }
-        public string Response { get; set; }
-        public string MyProperty { get; set; }
+        public string Response { get; set; }       
         public List<Ratings> Ratings { get; set; } = new List<Ratings>();
     }
     public class Ratings
