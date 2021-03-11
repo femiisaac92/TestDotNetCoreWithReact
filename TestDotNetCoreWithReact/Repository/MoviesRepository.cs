@@ -8,7 +8,7 @@ namespace TestDotNetCoreWithReact.Repository
 {
     public class MoviesRepository : IMoviesRepository
     {
-        private readonly IRestClient _restClient;
+        
         private readonly string _url;
         private readonly string _apiKey;
         public MoviesRepository(string Url,string Api)
