@@ -19,4 +19,4 @@ Update this in the appsetting
 
 
 # sample Result
-TestDotNetCoreWithReact\TestDotNetCoreWithReact\ClientApp\public\Screenshot 2021-03-12 110319.png
+![alt text](https://github.com/femiisaac92/TestDotNetCoreWithReact/blob/master/TestDotNetCoreWithReact/ClientApp/public/Screenshot%202021-03-12%20110319.png)
