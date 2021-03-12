@@ -20,13 +20,20 @@ namespace TestDotNetCoreWithReact.Controllers
         [HttpGet]
         public IEnumerable<MovieSearch> Get(SearchRequest Search)
         {
-            var cacheData = SearchCacheRecords(Search.S);
-            if (cacheData.Count() > 0)
-                return cacheData;
-            var data =  MRP.Search<MovieSearchResult>(Search);
-            if (data.Search != null)
-                LogIntoDB(Search.S,data);
-            return data==null ? new List<MovieSearch>() : data.Search;
+            try
+            {
+                var cacheData = SearchCacheRecords(Search.S);
+                if (cacheData.Count() > 0)
+                    return cacheData;
+                var data = MRP.Search<MovieSearchResult>(Search);
+                if (data.Search != null)
+                    LogIntoDB(Search.S, data);
+                return data == null ? new List<MovieSearch>() : data.Search;
+            }
+            catch (Exception)
+            {
+                throw;
+            }            
         }
         [HttpGet]
         public MovieDetails Details(SearchRequest Search)
